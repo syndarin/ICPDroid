@@ -2,12 +2,13 @@ package com.syndarin.icpdroid;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class HwbEvent {
 
 	private String office;
-	private Date date;
+	private Calendar date;
 	private String state;
 	private String comment;
 
@@ -19,13 +20,15 @@ public class HwbEvent {
 		this.office = office;
 	}
 
-	public Date getDate() {
+	public Calendar getDate() {
 		return date;
 	}
 
-	public void setDate(String date) throws ParseException {
+	public void setDate(String dateString) throws ParseException {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
-		this.date = format.parse(date);
+		Date date = format.parse(dateString);
+		this.date = Calendar.getInstance();
+		this.date.setTime(date);
 	}
 
 	public String getState() {
@@ -46,7 +49,6 @@ public class HwbEvent {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return office+"\n"+date+"\n"+state+"\n"+comment;
 	}
 	

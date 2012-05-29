@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ICPDroid</string>
-    <string name="hwb_hint">Введите номер отправки...</string>
+    <string name="date_pattern">"dd/MM/yyyy"</string>
+    <string name="hwb_hint">Введите номер отправки&#8230;</string>
     <string name="button_search">Искать информацию</string>
-    <string name="hwb_format_error">Номер накладной имеет неверный формат!\nВведите номер в формате \"999-999999\"</string>
+    <string name="button_scan">Сканировать номер</string>
+    <string name="hwb_format_error">Номер накладной имеет неверный формат!\nВведите номер в формате \"999&#8211;999999\"</string>
     <string name="io_exception_error">Ошибка соединения с сервером! Проверьте подключение к Интернет!</string>
     <string name="protocol_exception_error">Ошибка протокола НТТР! Пожалуйста, свяжитесь с разработчиком - syndarin@yandex.ru</string>
     <string name="parse_exception_error">Ошибка ответа сервера! Пожалуйста, свяжитесь с разработчиком - syndarin@yandex.ru</string>
+	<string name="no_hwb_info">No information about your shipment!</string>
 </resources>

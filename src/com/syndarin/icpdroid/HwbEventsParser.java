@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -25,8 +26,8 @@ public class HwbEventsParser {
 	private final static String INFO_DATE="date";
 	private final static String INFO_STATE="state";
 
-	public static ArrayList<HwbEvent> parseEvents(InputStream rawXML) throws ParserConfigurationException, SAXException, IOException, DOMException, ParseException {
-		ArrayList<HwbEvent> events = null;
+	public List<HwbEvent> parseEvents(InputStream rawXML) throws ParserConfigurationException, SAXException, IOException, DOMException, ParseException {
+		List<HwbEvent> events = new ArrayList<HwbEvent>();
 
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
@@ -46,8 +47,6 @@ public class HwbEventsParser {
 		
 		if (total > 0) {
 			
-			events=new ArrayList<HwbEvent>();
-
 			NodeList eventsNodeList=root.getElementsByTagName(EVENTS_CONTAINER);
 			
 			Node eventsNode=eventsNodeList.item(0);
