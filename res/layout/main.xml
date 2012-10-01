@@ -1,32 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/background"
     android:orientation="vertical" >
-    <EditText
-        android:id="@+id/hwb_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hwb_hint"
-        android:inputType="phone"
-        android:singleLine="true" />
-    <Button
-        android:id="@+id/button_search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/button_search" />
 
-    <Button
-        android:id="@+id/button_scan"
-        android:layout_width="match_parent"
+    <ImageButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_scan" />
-    
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/result_list" >
-        
-    </ListView>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/corner_left_back"
+        android:paddingBottom="15dip"
+        android:paddingRight="20dip"
+        android:src="@drawable/email" />
 
-</LinearLayout>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/corner_right_back"
+        android:paddingBottom="15dip"
+        android:paddingLeft="15dip"
+        android:src="@drawable/call_us" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dip"
+        android:src="@drawable/logo" />
+
+    <RelativeLayout
+        android:id="@+id/workArea"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/black_layout" >
+
+        <ImageButton
+            android:id="@+id/button_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/hwb_number"
+            android:layout_alignTop="@+id/hwb_number"
+            android:layout_toLeftOf="@+id/hwb_number"
+            android:background="@null"
+            android:src="@drawable/scan" />
+
+        <EditText
+            android:id="@+id/hwb_number"
+            android:layout_width="320dip"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="4dip"
+            android:background="@drawable/text_back"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:inputType="phone"
+            android:lines="1"
+            android:singleLine="true"
+            android:textSize="48sp" />
+
+        <ImageButton
+            android:id="@+id/button_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/hwb_number"
+            android:layout_alignTop="@+id/hwb_number"
+            android:layout_toRightOf="@+id/hwb_number"
+            android:background="@null"
+            android:src="@drawable/search" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/workArea"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dip"
+        android:src="@drawable/icp" />
+
+</RelativeLayout>

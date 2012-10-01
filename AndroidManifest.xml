@@ -8,34 +8,47 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="8" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.CAMERA" />
 
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
             android:name=".ICPDroidActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action
+                    android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ResultActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.google.zxingmy.client.android.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action
+                    android:name="com.google.zxingmy.client.android.SCAN" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
-
-    <activity
-        android:name="com.google.zxingmy.client.android.CaptureActivity"
-        android:configChanges="orientation|keyboardHidden"
-        android:screenOrientation="landscape"
-        android:theme="@android:style/Theme.NoTitleBar"
-        android:windowSoftInputMode="stateAlwaysHidden" >
-        <intent-filter>
-            <action android:name="com.google.zxingmy.client.android.SCAN" />
-
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
-    </activity>
 
 </manifest>
