@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="app_name">InterCityPost Client</string>
     <string name="request_url">"http://tracking.intercitypost.com/index.php/MobileManifester/getHwbRoute/"</string>
     <string name="date_pattern">"yyyy/MM/dd"</string>
-    <string name="app_name">ICPDroid</string>
-    <string name="hwb_hint">000-000000</string>
+    <string name="hwb_hint">000&#8211;000000</string>
     <string name="button_search">Search for info</string>
     <string name="button_scan">Scan barcode</string>
     <string name="hwb_format_error">Hwb number format is invalid!\nPlease enter hwb number like \"999–999999\"</string>
     <string name="io_exception_error">Server connection error! Check your Internet connection!</string>
     <string name="parse_exception_error">Server answer error! Please, contact to developer on syndarin@yandex.ru</string>
     <string name="no_hwb_info">No information about your shipment!</string>
+    <string name="telephony_not_supported">Telephony isn\'t supported on this device!</string>
+    <string name="select_your_city">Choose your city:</string>
+    <string name="select_phone_number">Select number to dial:</string>
 
 </resources>

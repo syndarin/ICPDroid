@@ -2,5 +2,7 @@
 <resources>
 
     <color name="toast_back_color">#FFCB08</color>
+    <color name="phone_list_text">#ff000000</color>
+    <color name="status_text">#ff444444</color>
 
 </resources>

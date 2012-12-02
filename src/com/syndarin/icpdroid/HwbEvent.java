@@ -1,12 +1,15 @@
 package com.syndarin.icpdroid;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class HwbEvent {
+public class HwbEvent implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	private String office;
 	private Calendar date;
 	private String state;
@@ -25,7 +28,7 @@ public class HwbEvent {
 	}
 
 	public void setDate(String dateString) throws ParseException {
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		Date date = format.parse(dateString);
 		this.date = Calendar.getInstance();
 		this.date.setTime(date);

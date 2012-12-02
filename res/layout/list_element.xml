@@ -8,7 +8,6 @@
         android:id="@+id/dateLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:background="@drawable/result_title" >
 
         <TextView
@@ -44,17 +43,21 @@
                 android:id="@+id/text_state"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:textColor="@color/status_text" />
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight="35" >
 
             <ImageView
+                android:id="@+id/graph"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="2dip"
                 android:src="@drawable/yellow_vert" />
 
             <TextView
@@ -62,8 +65,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/text_state" />
-        </LinearLayout>
+                android:layout_toRightOf="@+id/graph"
+                android:textSize="18sp" />
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/text_comment_detail" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_below="@+id/text_comment" -->
+            <!-- android:layout_toRightOf="@+id/graph" -->
+            <!-- android:textSize="18sp" /> -->
+
+        </RelativeLayout>
+
+        <!-- <LinearLayout -->
+        <!-- android:layout_width="0dip" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_weight="35" > -->
+
+
+        <!-- <ImageView -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:src="@drawable/yellow_vert" /> -->
+
+
+        <!-- <TextView -->
+        <!-- android:id="@+id/text_comment" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" /> -->
+        <!-- </LinearLayout> -->
     </LinearLayout>
 
 </LinearLayout>

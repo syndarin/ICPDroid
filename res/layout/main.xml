@@ -6,6 +6,7 @@
     android:orientation="vertical" >
 
     <ImageButton
+        android:id="@+id/button_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -16,6 +17,7 @@
         android:src="@drawable/email" />
 
     <ImageButton
+        android:id="@+id/button_call"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -64,6 +66,7 @@
             android:layout_marginTop="4dip"
             android:background="@drawable/text_back"
             android:gravity="center"
+            android:hint="@string/hwb_hint"
             android:includeFontPadding="false"
             android:inputType="phone"
             android:lines="1"

@@ -51,8 +51,15 @@ public class ResultListAdapter extends BaseAdapter {
 		TextView cpView = (TextView)view.findViewById(R.id.text_state);
 		cpView.setText(event.getState());
 		
-		TextView commentView = (TextView)view.findViewById(R.id.text_comment);
-		commentView.setText(event.getComment());
+//		String[] commentDetail = event.getComment().split(" "); 
+		
+		TextView commentTimeView = (TextView)view.findViewById(R.id.text_comment);
+		commentTimeView.setText(event.getComment());
+		
+//		if(commentDetail.length>1){
+//			TextView commentSurnameView = (TextView) view.findViewById(R.id.text_comment_detail);
+//			commentSurnameView.setText(commentDetail[1]);
+//		}
 		
 		return view;
 	}
