@@ -171,7 +171,7 @@ public class ICPDroidActivity extends Activity implements OnClickListener {
 	}
 
 	private void startScanning() {
-		Intent scanIntent = new Intent("com.google.zxingmy.client.android.SCAN");
+		Intent scanIntent = new Intent("com.google.zxing.client.android.SCAN");
 		scanIntent.putExtra("SCAN_MODE", "ONE_D_MODE");
 		this.startActivityForResult(scanIntent, REQUEST_SCAN_BARCODE);
 	}

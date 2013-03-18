@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bgnew"
     android:orientation="vertical" >
 
     <ImageButton
@@ -58,7 +58,7 @@
 
         <EditText
             android:id="@+id/hwb_number"
-            android:layout_width="320dip"
+            android:layout_width="270dip"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="5dip"

@@ -9,7 +9,7 @@ public class ConnectionChecker {
 	public static boolean isOnline(Context context){
 		ConnectivityManager cManager=(ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo nInfo=cManager.getActiveNetworkInfo();
-		return (nInfo==null) ? false:true;
+		return nInfo!=null && nInfo.isConnectedOrConnecting();
 	}
 
 }
