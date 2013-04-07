@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bgnew"
-    android:orientation="vertical" >
+    android:background="@drawable/bgnew" >
 
     <ImageButton
         android:id="@+id/button_email"
@@ -27,69 +26,71 @@
         android:paddingLeft="15dip"
         android:src="@drawable/call_us" />
 
-    <ImageView
-        android:id="@+id/logo"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dip"
-        android:src="@drawable/logo" />
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
 
-    <RelativeLayout
-        android:id="@+id/workArea"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="15dip"
-        android:layout_marginRight="15dip"
-        android:layout_marginTop="10dip"
-        android:background="@drawable/black_layout" >
-
-        <ImageButton
-            android:id="@+id/button_scan"
+        <ImageView
+            android:id="@+id/logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/hwb_number"
-            android:layout_alignTop="@+id/hwb_number"
-            android:layout_toLeftOf="@+id/hwb_number"
-            android:background="@null"
-            android:src="@drawable/scan" />
+            android:layout_above="@+id/workArea"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logo" />
 
-        <EditText
-            android:id="@+id/hwb_number"
-            android:layout_width="270dip"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="5dip"
-            android:layout_marginRight="5dip"
-            android:layout_marginTop="4dip"
-            android:background="@drawable/text_back"
-            android:gravity="center"
-            android:hint="@string/hwb_hint"
-            android:includeFontPadding="false"
-            android:inputType="phone"
-            android:lines="1"
-            android:singleLine="true"
-            android:textSize="48sp" />
-
-        <ImageButton
-            android:id="@+id/button_search"
+        <LinearLayout
+            android:id="@+id/workArea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/hwb_number"
-            android:layout_alignTop="@+id/hwb_number"
-            android:layout_toRightOf="@+id/hwb_number"
-            android:background="@null"
-            android:src="@drawable/search" />
-    </RelativeLayout>
+            android:layout_centerInParent="true"
+            android:background="@drawable/black_layout"
+            android:paddingBottom="25dip"
+            android:paddingLeft="50dip"
+            android:paddingRight="50dip"
+            android:paddingTop="15dip" >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/workArea"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dip"
-        android:src="@drawable/icp" />
+            <ImageButton
+                android:id="@+id/button_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:src="@drawable/scan" />
+
+            <EditText
+                android:id="@+id/hwb_number"
+                android:layout_width="270dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="4dip"
+                android:background="@drawable/text_back"
+                android:gravity="center|center_vertical"
+                android:hint="@string/hwb_hint"
+                android:includeFontPadding="false"
+                android:inputType="phone"
+                android:lines="1"
+                android:singleLine="true"
+                android:textSize="48sp" />
+
+            <ImageButton
+                android:id="@+id/button_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:src="@drawable/search" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/workArea"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:src="@drawable/icp" />
+    </LinearLayout>
 
 </RelativeLayout>

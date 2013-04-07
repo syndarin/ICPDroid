@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<previews>
+
+    <preview
+        name="320x480"
+        activity="com.syndarin.icpdroid.ICPDroidActivity"
+        config="layout-sw320dp-w480dp-h320dp-normal-notlong-land-notnight-mdpi-finger-keyssoft-nokeys-navexposed-trackball-480x320-v17"
+        device="3.2in QVGA (ADP2)"
+        devicestate="Landscape"
+        target="Android 4.2"
+        theme="@android:style/Theme" >
+    </preview>
+    <preview
+        name="Galaxy Nexus"
+        activity="com.syndarin.icpdroid.ICPDroidActivity"
+        config="layout-sw360dp-w640dp-h360dp-normal-long-land-notnight-xhdpi-finger-keyssoft-nokeys-navhidden-nonav-1280x720-v17"
+        device="Galaxy Nexus"
+        devicestate="Landscape"
+        target="Android 4.2"
+        theme="@android:style/Theme" >
+    </preview>
+
+</previews>
